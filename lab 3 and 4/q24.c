@@ -26,6 +26,7 @@ int main ()
         default : y = 1 +n*x;
         break;
     }
+    printf("%d",y);
     return 0;
 
 }
