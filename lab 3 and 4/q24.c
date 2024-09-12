@@ -13,6 +13,8 @@ int main ()
     //Taking input from the user
     printf("Enter the value of n: ");
     scanf("%d",&n);
+    printf("Enter the value of x: ");
+    scanf("%d",&x);
 
     //Using switch statement to get the value of y as per the value of n
     switch(n)
