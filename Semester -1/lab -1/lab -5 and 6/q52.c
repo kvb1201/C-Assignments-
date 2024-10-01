@@ -1,36 +1,48 @@
 /*
 print
-1
-121
-12321
+   1
+  121
+ 12321
 1234321
 
 
 */
 
 #include<stdio.h>
+
 int main()
 {
-    int n; //declaration of variable to store user's input
+    int n ; // Number of rows in the pattern
 
-    //taking input from the user
     printf("Enter the value of n: ");
     scanf("%d",&n);
 
-    //triggering the loop for printing the pattern
-    for(int i =1; i <=n; i++)
+    
+
+    for(int i = 1; i <= n; i++)
     {
-        for(int j =1; j <=i; j++)
+        // Print leading spaces
+        for(int j = 1; j <= n - i; j++)
         {
-            printf("%d",j); //printing the value of j to print the numbers from 1 to i
-            if(j == i)
-            for(int k =j-1; k >=1; k--)
-            {
-                printf("%d",k); //printing numbers from i to 1
-            }
+            printf(" ");
         }
+    //printing the number till i
+        for(int j = 1; j <= (2 * i - 1); j++)
+        {
+            printf("%d",j);
+            if(j == i )
+            break;
+
+            
+        }
+        //printing numbers from i to 1
+        for(int j =i-1; j >=1; j --)
+        {
+            printf("%d",j);
+        }
+
+        // Move to the next line after each row
         printf("\n");
+
     }
-
-
 }
